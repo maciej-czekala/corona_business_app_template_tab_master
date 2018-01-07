@@ -12,6 +12,8 @@ local function View(controler, model)
     title:setFillColor( 0 )
     sceneGroup:insert(title)
 
+    local btn = ui.newButton({touchCallback = controler.goToDetails, config = { style = "raised", touchCallback = controler.goToDetails }, label = {text = "details"}})
+    sceneGroup:insert(btn)
 
 
 	return sceneGroup

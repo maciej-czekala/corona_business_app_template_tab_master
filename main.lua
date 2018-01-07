@@ -6,9 +6,11 @@
 --
 ------------------------------------------------------------
 display.setDefault( "background", 1, 1, 1 )
+
+ui =  require ("plugin.ui_framework")
+ui:init()
+
 app = require ("plugin.app_framework")
 app:init({enableMasters = true})
 app:goTo("splash", {effect = "none"})
 
-ui =  require ("plugin.ui_framework")
-ui:init()

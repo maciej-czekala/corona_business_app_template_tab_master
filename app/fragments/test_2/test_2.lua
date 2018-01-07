@@ -23,7 +23,9 @@ function fragment.new(fragmentGroup, controler, viewControler, params)
 	------------
 	-- Scene functions declaration
 	------------
-
+	function controler.goToDetails()
+		app:goTo("details")
+	end
 
 --==========================================--
 	

@@ -1,13 +1,12 @@
 local scene = {}
 local View = require("app.scenes.details.details_view")
-local x = 0
 function scene.new(viewGroup, controler, viewControler, params)
 --==========================================--
 	-------------
 	-- Imports
 	-------------
 	-- declair model with set of items
-	local model = app.Model(
+	local model = app:Model(
 		{
 			title = "string"
 		})

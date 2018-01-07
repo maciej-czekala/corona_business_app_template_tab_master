@@ -22,7 +22,7 @@ local function View(controler, model)
 		    	-- title = "1",
 		    	description = value,
 		    	buttons = {
-		    		{text = "next", touchCallback = controler.next}
+		    		{ label = {text = "next"}, config = { touchCallback = controler.next } }
 		    	}
 		    })
 		    card.x = _w*.5

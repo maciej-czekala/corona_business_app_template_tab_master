@@ -9,7 +9,7 @@ local function View(controler, model)
 	-- bg.dont_remove = true
 	-- bg.alpha = .1
 
-	model:setBinding("description",
+	model.setBinding("description",
 		function(value)
 			-- bg:setFillColor( math.random(255)/255, math.random(255)/255, math.random(255)/255 )
 			for i = sceneGroup.numChildren, 1, -1 do

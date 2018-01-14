@@ -6,7 +6,7 @@ local function View(controler, model)
 	local sceneGroup = ui.newStackPanel()--display.newGroup()
 	sceneGroup.x = _w*.5
 	
-	local title = display.newText({text = model:get("description")} )
+	local title = display.newText({text = model.get("description")} )
 	title.dock = {left = true}
 	title.padding = {left = 8, top = 8}
     title:setFillColor( 0 )

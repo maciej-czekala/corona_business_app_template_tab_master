@@ -7,11 +7,11 @@ function fragment.new(fragmentGroup, controler, viewControler, params)
 	-------------
 	-- Imports
 	-------------
-	local model = app:Model({
+	local model = app.Model({
 		description = "string"
 		})
 
-	model:set("description","some additional information")
+	model.set("description","some additional information")
 	-------------
 	-- Scene helpers
 	-------------
@@ -24,7 +24,7 @@ function fragment.new(fragmentGroup, controler, viewControler, params)
 	-- Scene functions declaration
 	------------
 	function controler.goToDetails()
-		app:goTo("details")
+		app.goTo("details")
 	end
 
 --==========================================--

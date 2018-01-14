@@ -6,13 +6,13 @@ function scene.new(viewGroup, controler, viewControler, params)
 	-- Imports
 	-------------
 	-- declair model with set of items
-	local model = app:Model(
+	local model = app.Model(
 		{
 			title = "string"
 		})
 
 	-- set value for model item
-	model:set("title", "Details")
+	model.set("title", "Details")
 
 	-------------
 	-- Scene helpers
@@ -28,7 +28,7 @@ function scene.new(viewGroup, controler, viewControler, params)
 	--Functions
 	------------ 
 	function controler.backCallback()
-		app:goBack()
+		app.goBack()
 	end
 
 
@@ -47,12 +47,18 @@ function scene.new(viewGroup, controler, viewControler, params)
 		print("splash show")
 	end
 
+	function controler.onAndroidBackButtonPressed()
+		controler.backCallback()
+	end
+
 	--------------
 	-- Clean Scene
 	--------------
 	function controler.onDestroy()
 
 	end
+
+
 end
 
 return scene

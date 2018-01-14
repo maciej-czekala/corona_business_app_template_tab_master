@@ -10,9 +10,14 @@ local function View(controler, model)
 	local navBar = ui.newNavbar({
 		title = "Details", 
 		buttons = {
-     		back = {text = "home", touchCallback = controler.backCallback
-     		
-     		--icon = {touchCallback = controler.backCallback
+     		left = { 
+     			config = {
+     				style = "back", 
+     				touchCallback = controler.backCallback
+     			}, 
+     			label = { 
+     				text = "home"
+     			} 
      		}
     	}
     })
@@ -21,7 +26,7 @@ local function View(controler, model)
 	sceneGroup:insert(navBar)
 
 	-- display object in our view
-	local title = display.newText( { text = model:get("title")} )
+	local title = display.newText( { text = model.get("title")} )
 	title:setFillColor( 1,0,0 )
 	title.x = 100
 	title.y = 100
@@ -36,7 +41,7 @@ local function View(controler, model)
 
 	-- set up binding so then title will be chande  you will get new value here. 
 	-- update your display objecct with new value.
-	model:setBinding("title",
+	model.setBinding("title",
 		function(value)
 			title.text = value
 		end)

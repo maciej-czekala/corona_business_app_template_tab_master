@@ -11,6 +11,11 @@ ui =  require ("plugin.ui_framework")
 ui:init()
 
 app = require ("plugin.app_framework")
-app:init({enableMasters = true})
-app:goTo("splash", {effect = "none"})
+app.init({enable = 
+	{
+		masterTab = true
+	}
+
+})
+app.goTo("splash", {effect = "none"})
 

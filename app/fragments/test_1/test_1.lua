@@ -14,7 +14,7 @@ function fragment.new(fragmentGroup, controler, viewControler, params)
 	-- Scene helpers
 	-------------
 
-	local model = app:Model({
+	local model = app.Model({
 		description = "string"
 		})
 	------------
@@ -40,7 +40,7 @@ function fragment.new(fragmentGroup, controler, viewControler, params)
 
 	function controler.next()
 		local _description = data_source:getRandomItem()
-		model:set("description", _description)
+		model.set("description", _description)
 	end
 
 	function controler.onCreate()
@@ -49,7 +49,7 @@ function fragment.new(fragmentGroup, controler, viewControler, params)
 
 		timer.performWithDelay( 400, 
 			function()
-				model:set("description", data_source:getRandomItem())
+				model.set("description", data_source:getRandomItem())
 			end )
 	end
 
